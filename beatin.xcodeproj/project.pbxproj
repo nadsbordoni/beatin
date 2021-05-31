@@ -19,6 +19,7 @@
 		FE49FA8426615D94009D1BFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE49FA8326615D94009D1BFD /* Preview Assets.xcassets */; };
 		FE49FA9026615D94009D1BFD /* beatinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE49FA8F26615D94009D1BFD /* beatinTests.swift */; };
 		FE49FA9B26615D94009D1BFD /* beatinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE49FA9A26615D94009D1BFD /* beatinUITests.swift */; };
+		FEFC5912266554E000A0BF77 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFC5911266554E000A0BF77 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		FE49FA9626615D94009D1BFD /* beatinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beatinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE49FA9A26615D94009D1BFD /* beatinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beatinUITests.swift; sourceTree = "<group>"; };
 		FE49FA9C26615D94009D1BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEFC5911266554E000A0BF77 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				FE49FA7626615D94009D1BFD /* beatinApp.swift */,
 				FE49FA7826615D94009D1BFD /* ContentView.swift */,
+				FEFC5911266554E000A0BF77 /* PlayerView.swift */,
 				FE49FA7A26615D94009D1BFD /* NotificationController.swift */,
 				FE49FA7C26615D94009D1BFD /* NotificationView.swift */,
 				FE49FA7E26615D94009D1BFD /* ComplicationController.swift */,
@@ -388,6 +391,7 @@
 				FE49FA7B26615D94009D1BFD /* NotificationController.swift in Sources */,
 				FE49FA7926615D94009D1BFD /* ContentView.swift in Sources */,
 				FE49FA7F26615D94009D1BFD /* ComplicationController.swift in Sources */,
+				FEFC5912266554E000A0BF77 /* PlayerView.swift in Sources */,
 				FE49FA7726615D94009D1BFD /* beatinApp.swift in Sources */,
 				FE49FA7D26615D94009D1BFD /* NotificationView.swift in Sources */,
 			);

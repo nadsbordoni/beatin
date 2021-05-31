@@ -15,8 +15,8 @@ struct ContentView: View {
             .scaledToFit()
             Text("83 BPM")
                 .font(.system(size: 24))
-            .foregroundColor(.darkGrey)
-        }.background(Color.lightGreen)
+            .foregroundColor(.lightPurple)
+        }
            
     }
 }
@@ -28,8 +28,6 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 extension Color {
-    static var darkGrey = Color(UIColor(red: 71/255, green: 73/255, blue: 84/255, alpha: 1.0))
-    
-    static var lightGreen = Color(UIColor(red: 225/255, green: 241/255, blue: 241/255, alpha: 1.0))
+    static var lightPurple = Color(UIColor(red: 213/255, green: 189/255, blue: 239/255, alpha: 1.0))
     
 }
