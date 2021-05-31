@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E58EE2DE266566D600CFAD7D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2DD266566D600CFAD7D /* SwiftyJSON.swift */; };
+		E58EE2E52665671600CFAD7D /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */; };
+		E58EE2EC2665674300CFAD7D /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2EB2665674300CFAD7D /* Song.swift */; };
 		FE49FA6626615D92009D1BFD /* beatin WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FE49FA6526615D92009D1BFD /* beatin WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FE49FA6B26615D93009D1BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE49FA6A26615D93009D1BFD /* Assets.xcassets */; };
 		FE49FA7226615D94009D1BFD /* beatin WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FE49FA7126615D94009D1BFD /* beatin WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -80,6 +83,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E58EE2DD266566D600CFAD7D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
+		E58EE2EB2665674300CFAD7D /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		FE49FA6126615D92009D1BFD /* beatin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beatin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE49FA6526615D92009D1BFD /* beatin WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beatin WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE49FA6A26615D93009D1BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,8 +172,11 @@
 			children = (
 				FE49FA7626615D94009D1BFD /* beatinApp.swift */,
 				FE49FA7826615D94009D1BFD /* ContentView.swift */,
+				E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */,
+				E58EE2EB2665674300CFAD7D /* Song.swift */,
 				FEFC5911266554E000A0BF77 /* PlayerView.swift */,
 				FE49FA7A26615D94009D1BFD /* NotificationController.swift */,
+				E58EE2DD266566D600CFAD7D /* SwiftyJSON.swift */,
 				FE49FA7C26615D94009D1BFD /* NotificationView.swift */,
 				FE49FA7E26615D94009D1BFD /* ComplicationController.swift */,
 				FE49FA8026615D94009D1BFD /* Assets.xcassets */,
@@ -391,12 +400,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E58EE2EC2665674300CFAD7D /* Song.swift in Sources */,
 				FE49FA7B26615D94009D1BFD /* NotificationController.swift in Sources */,
 				FEFC59142665584500A0BF77 /* colorExtension.swift in Sources */,
 				FE49FA7926615D94009D1BFD /* ContentView.swift in Sources */,
 				FE49FA7F26615D94009D1BFD /* ComplicationController.swift in Sources */,
+				E58EE2E52665671600CFAD7D /* AppleMusicAPI.swift in Sources */,
 				FEFC5912266554E000A0BF77 /* PlayerView.swift in Sources */,
 				FE49FA7726615D94009D1BFD /* beatinApp.swift in Sources */,
+				E58EE2DE266566D600CFAD7D /* SwiftyJSON.swift in Sources */,
 				FE49FA7D26615D94009D1BFD /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
