@@ -6,20 +6,23 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct ContentView: View {
+    
     var body: some View {
         VStack() {
             Spacer(minLength: 5)
             Image("heart")
-            .resizable()
+                .resizable()
                 .scaledToFit()
-                .frame(width: 110, height: 110, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .padding(.top, 32)
             Text("83 BPM")
                 .font(.system(size: 24))
                 .foregroundColor(.lightPurple)
                 .padding(.top)
-    
+            
             HStack(){
                 Text("nome da musica q")
                     .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
@@ -31,9 +34,11 @@ struct ContentView: View {
             }
             
         }
+        .padding(.bottom, 25)
         
-           
+        
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

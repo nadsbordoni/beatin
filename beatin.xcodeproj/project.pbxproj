@@ -60,7 +60,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		FE49FAA226615D94009D1BFD /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
@@ -575,6 +575,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"beatin WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = X43VG9VLQG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "beatin WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -598,6 +599,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"beatin WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = X43VG9VLQG;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "beatin WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -622,6 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X43VG9VLQG;
 				IBSC_MODULE = beatin_WatchKit_Extension;
 				INFOPLIST_FILE = "beatin WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = nadiabordoni.beatin.watchkitapp;
@@ -641,6 +644,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X43VG9VLQG;
 				IBSC_MODULE = beatin_WatchKit_Extension;
 				INFOPLIST_FILE = "beatin WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = nadiabordoni.beatin.watchkitapp;
@@ -658,6 +662,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X43VG9VLQG;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nadiabordoni.beatin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -670,6 +675,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X43VG9VLQG;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = nadiabordoni.beatin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

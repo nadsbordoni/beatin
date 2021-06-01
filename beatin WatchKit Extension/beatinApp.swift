@@ -12,7 +12,7 @@ struct beatinApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                PlayerView()
             }
         }
 
