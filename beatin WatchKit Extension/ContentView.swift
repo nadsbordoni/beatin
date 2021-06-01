@@ -18,6 +18,7 @@ struct ContentView: View {
                 .scaledToFit()
                 .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .padding(.top, 32)
+                
             Text("83 BPM")
                 .font(.system(size: 24))
                 .foregroundColor(.lightPurple)

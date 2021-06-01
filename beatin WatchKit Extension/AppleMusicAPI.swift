@@ -7,8 +7,6 @@
 // 1
 import StoreKit
  
-<<<<<<< HEAD
-
 class AppleMusicAPI {
     // 3
     let developerToken = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjY1OVJBVTJGWUMifQ.eyJpc3MiOiJYNDNWRzlWTFFHIiwiaWF0IjoxNjIyNDkxMjQ1LCJleHAiOjE2MzgyNTkyNDV9.syOnKW-B3ssSzjo2PCXM4Ea8K3H9OWHds1qgYQpsm8mCZ3DNWHpjgAzkE9ANHJb0dgsJuHIgMtNgoyKcnGA0FA"
@@ -98,17 +96,4 @@ class AppleMusicAPI {
         lock.wait()
         return songs
     }
-=======
-// 2
-class AppleMusicAPI {
-    // 3
-    let developerToken = "YOUR DEVELOPER TOKEN FROM PART 1"
- 
-    // 4
-    func getUserToken() -> String {
-        var userToken = String()
- 
-        return userToken
-    }
->>>>>>> 5299bd29bbab04ad3f2bfa698dbb39c5b172ab19
 }

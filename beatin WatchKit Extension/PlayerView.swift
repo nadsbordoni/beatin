@@ -7,10 +7,12 @@
 
 import SwiftUI
 import StoreKit
+import WatchKit
 
 struct PlayerView: View {
     
     var body: some View {
+        
         
         VStack(alignment: .leading) {
             Spacer(minLength: 10)
@@ -26,25 +28,25 @@ struct PlayerView: View {
                         .resizable()
                         .frame(width: 30, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .scaledToFit()
-                        
+
                 }).buttonStyle(BorderedButtonStyle(tint: .black))
-                
+
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Image("play")
                         .resizable()
                         .frame(width: 32, height: 32, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .scaledToFit()
-                        
-                        
+
+
                 }).padding().buttonStyle(BorderedButtonStyle(tint: .black))
-                
+
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Image("forward")
                         .resizable()
                         .padding(0.0)
                         .frame(width: 30, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .scaledToFit()
-                        
+
                 }).buttonStyle(BorderedButtonStyle(tint: .black))
             }
             .padding(.top, 15)
@@ -57,7 +59,7 @@ struct PlayerView: View {
                     .font(.subheadline)
                     .foregroundColor(.lightPurple)
             }
-            
+
         }
         
     }
