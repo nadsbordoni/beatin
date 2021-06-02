@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E53139E22666CD720055544D /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53139E12666CD720055544D /* HealthKit.framework */; };
 		E58EE2DE266566D600CFAD7D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2DD266566D600CFAD7D /* SwiftyJSON.swift */; };
 		E58EE2E52665671600CFAD7D /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */; };
 		E58EE2EC2665674300CFAD7D /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2EB2665674300CFAD7D /* Song.swift */; };
@@ -83,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E53139DF2666CD720055544D /* beatin WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "beatin WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		E53139E12666CD720055544D /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		E58EE2DD266566D600CFAD7D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
 		E58EE2EB2665674300CFAD7D /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53139E22666CD720055544D /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +139,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E53139E02666CD720055544D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E53139E12666CD720055544D /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE49FA5A26615D92009D1BFD = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +155,7 @@
 				FE49FA8E26615D94009D1BFD /* beatinTests */,
 				FE49FA9926615D94009D1BFD /* beatinUITests */,
 				FE49FA6226615D92009D1BFD /* Products */,
+				E53139E02666CD720055544D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +183,7 @@
 		FE49FA7526615D94009D1BFD /* beatin WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E53139DF2666CD720055544D /* beatin WatchKit Extension.entitlements */,
 				FE49FA7626615D94009D1BFD /* beatinApp.swift */,
 				FE49FA7826615D94009D1BFD /* ContentView.swift */,
 				E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */,
@@ -573,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "beatin WatchKit Extension/beatin WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"beatin WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = X43VG9VLQG;
@@ -597,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "beatin WatchKit Extension/beatin WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"beatin WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = X43VG9VLQG;
