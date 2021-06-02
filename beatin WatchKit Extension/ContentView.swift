@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var scale:CGFloat = 0.8
+    
     var body: some View {
         VStack() {
             Spacer(minLength: 5)
@@ -15,6 +17,16 @@ struct ContentView: View {
             .resizable()
                 .scaledToFit()
                 .frame(width: 110, height: 110, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .scaleEffect(scale)
+                .animation(
+                Animation
+                    .easeIn(duration: 0.55)
+                    .repeatForever()
+                )
+                .onAppear{
+                    self.scale += 0.1
+                }
+            
             Text("83 BPM")
                 .font(.system(size: 24))
                 .foregroundColor(.lightPurple)
