@@ -29,6 +29,7 @@ struct ContentView: View {
                 .font(.system(size: 24))
                 .foregroundColor(.lightPurple)
                 .padding(.top)
+
             
             HStack(){
                 Text("nome da musica q")
@@ -42,7 +43,10 @@ struct ContentView: View {
             
         }
         .padding(.bottom, 25)
-        .onAppear(perform: start)
+        .onAppear() {
+            
+            start()
+        }
         
     }
     
