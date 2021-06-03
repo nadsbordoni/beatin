@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct NotificationView: View {
-    var title: String?
-    var message: String?
     
     var body: some View {
-        
+       
         VStack(alignment: .leading) {
-            Text(title ?? "hello")
+            Text("Seu dia foi muito cheio hoje?")
                 .font(/*@START_MENU_TOKEN@*/.body/*@END_MENU_TOKEN@*/)
                 .fontWeight(.bold)
                 .padding(1.0)
-            Text(message ?? "hi")
+            Text("Que tal ouvir uma musiquinha para desestressar?")
             
         }
         

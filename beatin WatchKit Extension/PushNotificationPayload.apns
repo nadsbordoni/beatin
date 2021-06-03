@@ -2,7 +2,7 @@
     "aps": {
         "alert": {
             "body": "Notei que seus batimentos estão bem acelerados... Que tal ouvir uma musiquinha?",
-            "title": "Eita! Calma ai!",
+            "title": "Seu dia foi estressante?",
         },
         "category": "myCategory",
         "thread-id": "5280"

@@ -10,11 +10,11 @@ import SwiftUI
 import UserNotifications
 
 class NotificationController: WKUserNotificationHostingController<NotificationView> {
-    var title: String?
-    var message: String?
+    
     
     override var body: NotificationView {
-        return NotificationView(title: title, message: message)
+        return NotificationView()
+        
         
     }
     
@@ -30,21 +30,16 @@ class NotificationController: WKUserNotificationHostingController<NotificationVi
     
     
     override func didReceive(_ notification: UNNotification) {
+        //var dateComponents = DateComponents()
+        //dateComponents.hour = 16
+        //dateComponents.minute = 20
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
+        //eu acho que a condiçao tem que existir aqui
         let okButton = NSLocalizedString("OK", comment: "Done button title in notification.")
-        notificationActions = [UNNotificationAction(identifier: "okButton", title: okButton, options: [])]
-            
+        notificationActions = [UNNotificationAction(identifier: "okButton", title: okButton, options: [.foreground])]
         
-        let notificationData =
-            notification.request.content.userInfo as? [String: Any]
-        
-        let aps = notificationData?["aps"] as? [String: Any]
-        let alert = aps?["alert"] as? [String: Any]
-        
-        title = alert?["title"] as? String
-        message = alert?["body"] as? String
     }
+    
 }
-
