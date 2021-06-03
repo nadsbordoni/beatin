@@ -7,30 +7,17 @@
 		<key>beatin WatchKit App (Complication).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-<<<<<<< HEAD
 			<integer>2</integer>
-=======
-			<integer>3</integer>
->>>>>>> 5299bd29bbab04ad3f2bfa698dbb39c5b172ab19
 		</dict>
 		<key>beatin WatchKit App (Notification).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-<<<<<<< HEAD
 			<integer>1</integer>
-=======
-			<integer>2</integer>
->>>>>>> 5299bd29bbab04ad3f2bfa698dbb39c5b172ab19
 		</dict>
 		<key>beatin WatchKit App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
-		</dict>
-		<key>beatinTests.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>
