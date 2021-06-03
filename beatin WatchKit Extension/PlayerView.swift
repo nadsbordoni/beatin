@@ -14,7 +14,7 @@ struct PlayerView: View {
     @State var pauseMode: Bool = false
     @State var playButton: String = "pause"
     
-    let songList: Array = ["Audio1", "Audio2"]
+    let songList: Array = ["Audio2", "Audio1"]
     @State var songPosition: Int = 0
     
     var body: some View {
@@ -33,33 +33,33 @@ struct PlayerView: View {
             HStack(){
                 Button(action: {
                     
-                    if isPlaying == false && songPosition != 0 {
+                    if pauseMode == true && songPosition != 0 {
                         
                         playButton = "pause"
                         songPosition -= 1
-                        playSound(sound: "\(songList[songPosition])", type: "mp3")
-                        isPlaying = true
+                        MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
+                        pauseMode = false
                         
                     }
                     
-                    else if isPlaying == false && songPosition == 0 {
+                    else if pauseMode == true && songPosition == 0 {
                         
-                        isPlaying = true
+                        pauseMode = false
                         playButton = "pause"
                         songPosition = songList.count - 1
-                        playSound(sound: "\(songList[songPosition])", type: "mp3")
+                        MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
                     }
                     
                     else if songPosition == 0  {
                         
                         songPosition = songList.count - 1
-                        playSound(sound: "\(songList[songPosition])", type: "mp3")
+                        MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
                     }
                     
                     else {
                         
                         songPosition -= 1
-                        playSound(sound: "\(songList[songPosition])", type: "mp3")
+                        MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
                     }
                     
                 }, label: {
@@ -72,18 +72,18 @@ struct PlayerView: View {
                 
                 Button(action: {
                     
-                    if pauseMode {
+                    if pauseMode == true {
                         
                         MusicPlayer.shared.resumeSound()
                         self.pauseMode.toggle()
-                        playButton = "play"
+                        playButton = "pause"
                     }
                     
                     else {
                         
                         MusicPlayer.shared.pauseSound()
                         self.pauseMode.toggle()
-                        playButton = "pause"
+                        playButton = "play"
                     }
                     
                     
@@ -98,33 +98,33 @@ struct PlayerView: View {
                 
                 Button(action: {
                     
-                    if isPlaying == false && songPosition != songList.count - 1 {
+                    if pauseMode == true && songPosition != songList.count - 1 {
                         
                         playButton = "pause"
                         songPosition += 1
-                        MusicPlayer.playSound(sound: "\(songList[songPosition])", type: "mp3")
-                        isPlaying = true
+                        MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
+                        pauseMode = false
                         
                     }
                     
-                    else if isPlaying == false && songPosition == songList.count - 1 {
+                    else if pauseMode == true && songPosition == songList.count - 1 {
                         
-                        isPlaying = true
+                        pauseMode = false
                         playButton = "pause"
                         songPosition = 0
-                        MusicPlayer.playSound(sound: "\(songList[songPosition])", type: "mp3")
+                        MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
                     }
                     
                     else if songPosition == songList.count - 1  {
                         
                         songPosition = 0
-                        MusicPlayer.playSound(sound: "\(songList[songPosition])", type: "mp3")
+                        MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
                     }
                     
                     else {
                         
                         songPosition += 1
-                        MusicPlayer.playSound(sound: "\(songList[songPosition])", type: "mp3")
+                        MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
                     }
                     
                 }, label: {
@@ -149,8 +149,8 @@ struct PlayerView: View {
             
         }
         .onAppear(perform: {
-            playSound(sound: "\(songList[songPosition])", type: "mp3")
-            isPlaying = true
+            AudioQueue.shared.music()
+            
             print("Música está tocando")
         })
         

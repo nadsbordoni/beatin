@@ -10,6 +10,7 @@
 		E541A29C266944F1008DDD98 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E541A29B266944F1008DDD98 /* PlaySound.swift */; };
 		E541A29E266945C8008DDD98 /* Audio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E541A29D266945C8008DDD98 /* Audio1.mp3 */; };
 		E541A2A026694FA6008DDD98 /* Audio2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E541A29F26694FA6008DDD98 /* Audio2.mp3 */; };
+		E541A2A22669741D008DDD98 /* AudioQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E541A2A12669741D008DDD98 /* AudioQueue.swift */; };
 		E58EE2DE266566D600CFAD7D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2DD266566D600CFAD7D /* SwiftyJSON.swift */; };
 		E58EE2E52665671600CFAD7D /* AppleMusicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */; };
 		E58EE2EC2665674300CFAD7D /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58EE2EB2665674300CFAD7D /* Song.swift */; };
@@ -89,6 +90,7 @@
 		E541A29B266944F1008DDD98 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		E541A29D266945C8008DDD98 /* Audio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Audio1.mp3; sourceTree = "<group>"; };
 		E541A29F26694FA6008DDD98 /* Audio2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Audio2.mp3; sourceTree = "<group>"; };
+		E541A2A12669741D008DDD98 /* AudioQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioQueue.swift; sourceTree = "<group>"; };
 		E58EE2DD266566D600CFAD7D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicAPI.swift; sourceTree = "<group>"; };
 		E58EE2EB2665674300CFAD7D /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				E58EE2E42665671600CFAD7D /* AppleMusicAPI.swift */,
 				E58EE2EB2665674300CFAD7D /* Song.swift */,
 				E541A29B266944F1008DDD98 /* PlaySound.swift */,
+				E541A2A12669741D008DDD98 /* AudioQueue.swift */,
 				FEFC5911266554E000A0BF77 /* PlayerView.swift */,
 				FE49FA7A26615D94009D1BFD /* NotificationController.swift */,
 				E58EE2DD266566D600CFAD7D /* SwiftyJSON.swift */,
@@ -421,6 +424,7 @@
 				FEFC5912266554E000A0BF77 /* PlayerView.swift in Sources */,
 				FE49FA7726615D94009D1BFD /* beatinApp.swift in Sources */,
 				E58EE2DE266566D600CFAD7D /* SwiftyJSON.swift in Sources */,
+				E541A2A22669741D008DDD98 /* AudioQueue.swift in Sources */,
 				FE49FA7D26615D94009D1BFD /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

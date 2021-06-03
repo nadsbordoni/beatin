@@ -11,7 +11,11 @@ import AVFoundation
 class MusicPlayer {
     
     static let shared = MusicPlayer()
+
+    let songList: Array = ["Audio2", "Audio1"]
     var audioPlayer: AVAudioPlayer?
+
+   
     
     func playSound(sound: String, type: String) {
         if let path = Bundle.main.path(forResource: sound, ofType: type) {
@@ -23,6 +27,7 @@ class MusicPlayer {
             }
         }
     }
+    
 
     func pauseSound() {
         
@@ -36,6 +41,8 @@ class MusicPlayer {
     }
 
 }
+
+
 
 
 
