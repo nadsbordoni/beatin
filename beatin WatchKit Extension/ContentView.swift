@@ -10,12 +10,14 @@ import StoreKit
 import HealthKit
 
 struct ContentView: View {
-    
-    private var healthStore = HKHealthStore()
+    @EnvironmentObject var workoutSession: WorkoutManager
+
+   // private var healthStore = HKHealthStore()
     let heartRateQuantity = HKUnit(from: "count/min")
     
     @State private var value = 0
-    
+    @State var workoutInProgress = false
+
     var body: some View {
         VStack() {
             Spacer(minLength: 5)
@@ -25,7 +27,7 @@ struct ContentView: View {
                 .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .padding(.top, 32)
                 
-            Text("\(value) BPM")
+            Text("\(workoutSession.heartrate, specifier: "%.1f") BPM")
                 .font(.system(size: 24))
                 .foregroundColor(.lightPurple)
                 .padding(.top)
@@ -48,6 +50,8 @@ struct ContentView: View {
     
     func start() {
         authorizeHealthKit()
+        workoutSession.startWorkout()
+        workoutInProgress = true
         startHeartRateQuery(quantityTypeIdentifier: .heartRate)
     }
     
@@ -57,7 +61,7 @@ struct ContentView: View {
             let healthKitTypes: Set = [
             HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)!]
          // Requests permission to save and read the specified data types.
-            healthStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes) { _, _ in }
+        workoutSession.healthStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes) { _, _ in }
         
           
         }
@@ -87,7 +91,7 @@ struct ContentView: View {
             
             // query execution
             
-            healthStore.execute(query)
+        workoutSession.healthStore.execute(query)
         }
 
     private func process(_ samples: [HKQuantitySample], type: HKQuantityTypeIdentifier) {

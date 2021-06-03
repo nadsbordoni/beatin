@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct beatinApp: App {
+    var workoutManager = WorkoutManager()
+
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
                 ContentView()
+                    .environmentObject(workoutManager)
             }
         }
 
