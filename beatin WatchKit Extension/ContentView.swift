@@ -11,15 +11,12 @@ import StoreKit
 
 struct ContentView: View {
     
-    
-    
     var body: some View {
         
-        NavigationView {
+            NavigationView {
             
             VStack() {
-                Spacer(minLength: 5)
-                
+                                
                 NavigationLink(
                     destination: PlayerView(),
                     label: {
@@ -27,14 +24,11 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .padding(.top, 32)
                     })
-                
-                
+
                 Text("83 BPM")
                     .font(.system(size: 24))
                     .foregroundColor(.lightPurple)
-                    .padding(.top)
                 
                 HStack(){
                     Text("nome da musica q")
@@ -47,11 +41,10 @@ struct ContentView: View {
                 }
                 
             }
-            .padding(.bottom, 25)
+
             
-        }
-        
-        
+            }
+
         
     }
     

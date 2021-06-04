@@ -8,6 +8,7 @@
 import SwiftUI
 import StoreKit
 import WatchKit
+import AVFoundation
 
 struct PlayerView: View {
     
@@ -149,7 +150,8 @@ struct PlayerView: View {
             
         }
         .onAppear(perform: {
-            AudioQueue.shared.music()
+            MusicPlayer.shared.playSound(sound: "Audio2", type: "mp3")
+            
             
             print("Música está tocando")
         })
