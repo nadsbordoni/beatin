@@ -21,8 +21,6 @@ struct PlayerView: View {
     var body: some View {
         
         
-        
-        
         VStack(alignment: .leading) {
             Spacer(minLength: 10)
             Text("Nome do artista")
