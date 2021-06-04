@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5DB02E4266A498F0062909F /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DB02E3266A498E0062909F /* PlaySound.swift */; };
+		E5DB02E7266A4A120062909F /* Audio1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5DB02E5266A4A120062909F /* Audio1.mp3 */; };
+		E5DB02E8266A4A120062909F /* Audio2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E5DB02E6266A4A120062909F /* Audio2.mp3 */; };
 		FE49FA6626615D92009D1BFD /* beatin WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FE49FA6526615D92009D1BFD /* beatin WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FE49FA6B26615D93009D1BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE49FA6A26615D93009D1BFD /* Assets.xcassets */; };
 		FE49FA7226615D94009D1BFD /* beatin WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FE49FA7126615D94009D1BFD /* beatin WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -80,6 +83,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E5DB02E3266A498E0062909F /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		E5DB02E5266A4A120062909F /* Audio1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Audio1.mp3; sourceTree = "<group>"; };
+		E5DB02E6266A4A120062909F /* Audio2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Audio2.mp3; sourceTree = "<group>"; };
 		FE49FA6126615D92009D1BFD /* beatin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beatin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE49FA6526615D92009D1BFD /* beatin WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beatin WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE49FA6A26615D93009D1BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +173,9 @@
 				FE49FA7626615D94009D1BFD /* beatinApp.swift */,
 				FE49FA7826615D94009D1BFD /* ContentView.swift */,
 				FEFC5911266554E000A0BF77 /* PlayerView.swift */,
+				E5DB02E5266A4A120062909F /* Audio1.mp3 */,
+				E5DB02E6266A4A120062909F /* Audio2.mp3 */,
+				E5DB02E3266A498E0062909F /* PlaySound.swift */,
 				FE49FA7A26615D94009D1BFD /* NotificationController.swift */,
 				FE49FA7C26615D94009D1BFD /* NotificationView.swift */,
 				FE49FA7E26615D94009D1BFD /* ComplicationController.swift */,
@@ -365,6 +374,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DB02E8266A4A120062909F /* Audio2.mp3 in Resources */,
+				E5DB02E7266A4A120062909F /* Audio1.mp3 in Resources */,
 				FE49FA8426615D94009D1BFD /* Preview Assets.xcassets in Resources */,
 				FE49FA8126615D94009D1BFD /* Assets.xcassets in Resources */,
 			);
@@ -392,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE49FA7B26615D94009D1BFD /* NotificationController.swift in Sources */,
+				E5DB02E4266A498F0062909F /* PlaySound.swift in Sources */,
 				FEFC59142665584500A0BF77 /* colorExtension.swift in Sources */,
 				FE49FA7926615D94009D1BFD /* ContentView.swift in Sources */,
 				FE49FA7F26615D94009D1BFD /* ComplicationController.swift in Sources */,
