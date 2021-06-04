@@ -8,6 +8,33 @@
 import SwiftUI
 import HealthKit
 
+extension View {
+
+    /// Navigate to a new view.
+    /// - Parameters:
+    ///   - view: View to navigate to.
+    ///   - binding: Only navigates when this condition is `true`.
+    func navigate<NewView: View>(to view: NewView, when binding: Binding<Bool>) -> some View {
+        NavigationView {
+            ZStack {
+                self
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+
+                NavigationLink(
+                    destination: view
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true),
+                    isActive: binding
+                ) {
+                    EmptyView()
+                }
+            }
+        }
+    }
+}
+
+
 struct ContentView: View {
     @State var scale:CGFloat = 0.8
     @State private var go = false
@@ -17,70 +44,88 @@ struct ContentView: View {
     
     @State private var value = 0
     @State var showAlert = false
+    
+    var playerView: [AnyView] = [AnyView(PlayerView())]
+    
+    @ObservedObject var manager: Manager = Manager()
+    @ObservedObject var nextView: Manager = Manager()
+    
     var body: some View {
-        VStack() {
-            Spacer(minLength: 5)
-            Image("heart")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 110, height: 110, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .scaleEffect(scale)
-                .animation(
-                    Animation
-                        .easeIn(duration: 0.55)
-                        .repeatForever()
-                )
-                .onAppear{
-                    self.scale += 0.1
-                }
+        
+        NavigationView {
             
-            Text("\(value) BPM")
-                .font(.system(size: 24))
-                .foregroundColor(.lightPurple)
-                .padding(.top)
-            VStack{
-                HStack(){
-                    Text("nome da musica q aaa")
-                        .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(.lightPurple)
-                        .lineLimit(/*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                    
-                    Image("musicalNote")
-                        .resizable()
-                        .frame(width: 13, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                }
-            }
-            .fixedSize()
-            .frame(width: 300, alignment: go ? .trailing : .leading)
-            .clipped()
-            .onAppear { self.go.toggle() }
-            .animation(Animation.linear(duration: 5).delay(1).repeatForever())
-            
-            
-        }
-        .onAppear() {
-            start()
-            
-        }
-        .onChange(of: value, perform: { value in
-            if value >= 70 {
-                showAlert = true
-            } else {
-                showAlert = false
-            }
-        })
-        .alert(isPresented: $showAlert) {
-                    Alert(
-                        title: Text("Eita! Calma ai!"),
-                        message: Text("Notei que seus batimentos estão bem acelerados... Que tal uma musiquinha?"),
-                        primaryButton: .default(Text("Claro")) {
-                                          //chamar outra pagina
-                                        print("chama outra pagina")
-                                       },
-                        secondaryButton: .cancel(Text("Agora não"))
+            VStack() {
+                Spacer(minLength: 5)
+                Image("heart")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 110, height: 110, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .scaleEffect(scale)
+                    .animation(
+                        Animation
+                            .easeIn(duration: 0.55)
+                            .repeatForever()
                     )
-
+                    .onAppear{
+                        self.scale += 0.1
+                    }
+                
+                Text("\(value) BPM")
+                    .font(.system(size: 24))
+                    .foregroundColor(.lightPurple)
+                    .padding(.top)
+//                VStack{
+//                    HStack(){
+//                        Text("nome da musica q aaa")
+//                            .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
+//                            .foregroundColor(.lightPurple)
+//                            .lineLimit(/*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+//                        
+//                        Image("musicalNote")
+//                            .resizable()
+//                            .frame(width: 13, height: 15, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+//                    }
+//                }
+//                .fixedSize()
+//                .frame(width: 300, alignment: go ? .trailing : .leading)
+//                .clipped()
+//                .onAppear { self.go.toggle() }
+//                .animation(Animation.linear(duration: 5).delay(1).repeatForever())
+                
+                
             }
+            .onAppear() {
+                start()
+                
+            }
+            .onChange(of: value, perform: { value in
+                if value >= 100 {
+                    showAlert = true
+                } else {
+                    showAlert = false
+                }
+            })
+            .alert(isPresented: $showAlert) {
+                
+                        Alert(
+                        
+                            title: Text("Eita! Calma ai!"),
+                            message: Text("Notei que seus batimentos estão bem acelerados... Que tal uma musiquinha?"),
+                            primaryButton: .default(Text("Claro")) {
+                                              //chamar outra pagina
+                                manager.nextView = true
+                                
+
+                            } ,
+                            secondaryButton: .cancel(Text("Agora não"))
+                        )
+
+            }.fullScreenCover(isPresented: $manager.nextView, content: { PlayerView() })
+            
+            
+        }
+        
+        
         
     }
     
@@ -143,6 +188,14 @@ struct ContentView: View {
         }
     
 }
+
+class Manager: ObservableObject {
+    @Published var nextView: Bool = false
+    @Published var index: Int = 0
+    @Published var scrollPosition: Int = 0
+    
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
