@@ -29,7 +29,7 @@ struct PlayerView: View {
                 }).buttonStyle(BorderedButtonStyle(tint: .black))
                 
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Image("play")
+                    Image("pause")
                         .resizable()
                         .frame(width: 32, height: 32, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .scaledToFit()
