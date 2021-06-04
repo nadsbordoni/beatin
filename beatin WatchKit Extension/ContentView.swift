@@ -16,7 +16,7 @@ struct ContentView: View {
     let heartRateQuantity = HKUnit(from: "count/min")
     
     @State private var value = 0
-
+    @State var showAlert = false
     var body: some View {
         VStack() {
             Spacer(minLength: 5)
@@ -60,7 +60,27 @@ struct ContentView: View {
         }
         .onAppear() {
             start()
+            
         }
+        .onChange(of: value, perform: { value in
+            if value >= 70 {
+                showAlert = true
+            } else {
+                showAlert = false
+            }
+        })
+        .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Eita! Calma ai!"),
+                        message: Text("Notei que seus batimentos estão bem acelerados... Que tal uma musiquinha?"),
+                        primaryButton: .default(Text("Claro")) {
+                                          //chamar outra pagina
+                                        print("chama outra pagina")
+                                       },
+                        secondaryButton: .cancel(Text("Agora não"))
+                    )
+
+            }
         
     }
     

@@ -21,8 +21,8 @@
 		FE49FA8426615D94009D1BFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE49FA8326615D94009D1BFD /* Preview Assets.xcassets */; };
 		FE49FA9026615D94009D1BFD /* beatinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE49FA8F26615D94009D1BFD /* beatinTests.swift */; };
 		FE49FA9B26615D94009D1BFD /* beatinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE49FA9A26615D94009D1BFD /* beatinUITests.swift */; };
-		FE7C1B10266A50D300438783 /* strawberrySwing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE7C1B0F266A50D300438783 /* strawberrySwing.mp3 */; };
-		FE7C1B12266A50EA00438783 /* weightless.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FE7C1B11266A50EA00438783 /* weightless.mp3 */; };
+		FEE4C06F266A636E002DCA2F /* strawberrySwing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEE4C06E266A636E002DCA2F /* strawberrySwing.mp3 */; };
+		FEE4C071266A637A002DCA2F /* weightless.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FEE4C070266A637A002DCA2F /* weightless.mp3 */; };
 		FEFC5912266554E000A0BF77 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFC5911266554E000A0BF77 /* PlayerView.swift */; };
 		FEFC59142665584500A0BF77 /* colorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFC59132665584500A0BF77 /* colorExtension.swift */; };
 /* End PBXBuildFile section */
@@ -106,8 +106,8 @@
 		FE49FA9626615D94009D1BFD /* beatinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beatinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE49FA9A26615D94009D1BFD /* beatinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beatinUITests.swift; sourceTree = "<group>"; };
 		FE49FA9C26615D94009D1BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE7C1B0F266A50D300438783 /* strawberrySwing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = strawberrySwing.mp3; path = ../../../Downloads/strawberrySwing.mp3; sourceTree = "<group>"; };
-		FE7C1B11266A50EA00438783 /* weightless.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = weightless.mp3; path = ../../../Downloads/weightless.mp3; sourceTree = "<group>"; };
+		FEE4C06E266A636E002DCA2F /* strawberrySwing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strawberrySwing.mp3; sourceTree = "<group>"; };
+		FEE4C070266A637A002DCA2F /* weightless.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = weightless.mp3; sourceTree = "<group>"; };
 		FEFC5911266554E000A0BF77 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		FEFC59132665584500A0BF77 /* colorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,8 +176,8 @@
 				FE49FA7826615D94009D1BFD /* ContentView.swift */,
 				FEFC5911266554E000A0BF77 /* PlayerView.swift */,
 				E5DB02E5266A4A120062909F /* Audio1.mp3 */,
-				FE7C1B11266A50EA00438783 /* weightless.mp3 */,
-				FE7C1B0F266A50D300438783 /* strawberrySwing.mp3 */,
+				FEE4C06E266A636E002DCA2F /* strawberrySwing.mp3 */,
+				FEE4C070266A637A002DCA2F /* weightless.mp3 */,
 				E5DB02E3266A498E0062909F /* PlaySound.swift */,
 				FE49FA7A26615D94009D1BFD /* NotificationController.swift */,
 				FE49FA7C26615D94009D1BFD /* NotificationView.swift */,
@@ -379,9 +379,9 @@
 			files = (
 				E5DB02E7266A4A120062909F /* Audio1.mp3 in Resources */,
 				FE49FA8426615D94009D1BFD /* Preview Assets.xcassets in Resources */,
-				FE7C1B10266A50D300438783 /* strawberrySwing.mp3 in Resources */,
+				FEE4C06F266A636E002DCA2F /* strawberrySwing.mp3 in Resources */,
 				FE49FA8126615D94009D1BFD /* Assets.xcassets in Resources */,
-				FE7C1B12266A50EA00438783 /* weightless.mp3 in Resources */,
+				FEE4C071266A637A002DCA2F /* weightless.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
