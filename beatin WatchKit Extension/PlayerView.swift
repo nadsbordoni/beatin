@@ -15,20 +15,19 @@ struct PlayerView: View {
     @State var pauseMode: Bool = false
     @State var playButton: String = "pause"
     
-    let songList: Array = ["Audio2", "Audio1"]
+    let songList: Array = ["strawberrySwing", "weightless", "Audio1"]
+    let songName: Array = ["Strawberry Swing", "Weighless", "Gostoso Demais"]
+    let artist: Array = ["Coldplay", "Marconi Union", "Maria Bethania"]
     @State var songPosition: Int = 0
     
     var body: some View {
-        
-        
-        
-        
+
         VStack(alignment: .leading) {
             Spacer(minLength: 10)
-            Text("Nome do artista")
+            Text("\(artist[songPosition])")
                 .font(/*@START_MENU_TOKEN@*/.subheadline/*@END_MENU_TOKEN@*/)
                 .foregroundColor(.lightPurple)
-            Text("\(songList[songPosition])")
+            Text("\(songName[songPosition])")
                 .font(.system(size: 22))
                 .foregroundColor(.lightPurple)
             HStack() {
@@ -152,7 +151,7 @@ struct PlayerView: View {
         }
         .padding(.top, 15)
         .onAppear(perform: {
-            MusicPlayer.shared.playSound(sound: "Audio2", type: "mp3")
+            MusicPlayer.shared.playSound(sound: "\(songList[songPosition])", type: "mp3")
             
             
             print("Música está tocando")
